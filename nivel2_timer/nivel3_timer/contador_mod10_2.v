@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module contador_mod10 (
+module contador_mod10_2 (
     input wire clk,          // sinal de clock
     input wire loadn,        
   	input wire [3:0] data,   // valor inicial do contador
