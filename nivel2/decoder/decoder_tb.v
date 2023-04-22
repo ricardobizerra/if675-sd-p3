@@ -4,6 +4,7 @@ module decoder_tb;
 
   reg [3:0] Minutos;
   reg [3:0] DezenaSeg;
+  
   reg [3:0] UnidadeSeg;
 
   wire [6:0] OutMinutos;
