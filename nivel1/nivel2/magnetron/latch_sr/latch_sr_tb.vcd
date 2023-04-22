@@ -1,0 +1,43 @@
+$date
+	Wed Apr 19 21:35:56 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module latch_sr_tb $end
+$var reg 1 ! reset_TB $end
+$var reg 1 " set_TB $end
+$scope module DUT $end
+$var wire 1 ! reset $end
+$var wire 1 " set $end
+$var reg 1 # mag_on $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x#
+0"
+0!
+$end
+#3000
+0#
+1!
+#6000
+0!
+#9000
+1#
+1"
+#12000
+0"
+#15000
+0#
+1!
+1"
+#18000
