@@ -20,7 +20,7 @@ module micro_waves_control(input wire startn, stopn, clearn,
 
     magnetron magnetron(startn, stopn, clearn,door_closed, zero, mag_on); // saida zero do timer conectado em timer_done do mag_on
 
-    timer_nivel2 timer_nivel2(D[3:0], pgt_1Hz, mag_on, loadn, clearn, unidades, dezenas, minutos, zero); // enable do timer é o mag_on
+    timer_nivel2 timer_nivel2(D, pgt_1Hz, mag_on, loadn, clearn, unidades, dezenas, minutos, zero); // enable do timer é o mag_on
 
     decoder decoder();
 
