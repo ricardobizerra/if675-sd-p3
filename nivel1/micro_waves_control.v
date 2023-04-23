@@ -10,6 +10,7 @@ module micro_waves_control(input wire startn, stopn, clearn,
                            sec_tens_segs, min_segs,
                            output wire mag_on);
 
+    wire [3:0] unidades, dezenas, minutos;
     wire zero;
     wire saida_controle;
     wire D[3:0];
