@@ -1,7 +1,7 @@
 module encoder(
     input wire [9:0] keyboard,
     input wire enablen,
-    output wire [3:0] bcd,
+    output reg [3:0] bcd,
     output reg valid_data
 );
 

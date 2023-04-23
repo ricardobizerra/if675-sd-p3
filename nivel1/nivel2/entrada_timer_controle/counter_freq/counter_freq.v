@@ -1,5 +1,5 @@
 module counter_freq(
-    input reg clk,
+    input clk,
     output reg clk_out
 );
 

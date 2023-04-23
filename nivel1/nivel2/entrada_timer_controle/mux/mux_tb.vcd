@@ -1,0 +1,51 @@
+$date
+	Sat Apr 22 23:13:18 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module mux_tb $end
+$var wire 1 ! pgt_1Hz_tb $end
+$var reg 1 " clk_tb $end
+$var reg 1 # enablen_tb $end
+$var reg 1 $ signal_tb $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # enablen $end
+$var wire 1 $ signal $end
+$var reg 1 ! pgt_1Hz $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+1#
+1"
+1!
+$end
+#5
+0!
+0#
+#10
+0"
+1$
+1#
+#15
+1!
+0#
+#20
+1"
+1#
+#25
+0#
+#30
+0!
+0"
+0$
+1#
+#35
+0#

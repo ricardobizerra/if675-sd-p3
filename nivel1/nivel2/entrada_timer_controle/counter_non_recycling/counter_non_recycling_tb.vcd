@@ -1,0 +1,55 @@
+$date
+	Sat Apr 22 22:58:44 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module counter_non_recycling_tb $end
+$var wire 1 ! signal_tb $end
+$var reg 1 " clear_tb $end
+$var reg 1 # clk_tb $end
+$var reg 1 $ contador_tb $end
+$scope module dut $end
+$var wire 1 " clear $end
+$var wire 1 # clk $end
+$var reg 3 % counter [2:0] $end
+$var reg 1 ! signal $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+0$
+1#
+1"
+x!
+$end
+#5
+1$
+#10
+0"
+#20
+0#
+#30
+b1 %
+1#
+#40
+0#
+#50
+b10 %
+1#
+#60
+0#
+#70
+b11 %
+1#
+#80
+0#
+#90
+b100 %
+1!
+1#

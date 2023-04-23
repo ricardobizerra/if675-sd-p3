@@ -1,6 +1,6 @@
 module mux(
     input wire enablen,
-    input reg signal,
+    input wire signal,
     input clk,
     output reg pgt_1Hz
 );

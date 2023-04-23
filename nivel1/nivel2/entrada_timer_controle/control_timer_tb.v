@@ -6,9 +6,9 @@ module control_timer_tb;
     reg [9:0] keyboard_tb;
     reg enablen_tb;
     reg clk_tb;
-    wire [3:0] d;
-    wire loadn;
-    wire pgt_1Hz;
+    wire [3:0] d_tb;
+    wire loadn_tb;
+    wire pgt_1Hz_tb;
 
     control_timer dut(
         .keyboard(keyboard_tb), .enablen(enablen_tb), .clk(clk_tb),
