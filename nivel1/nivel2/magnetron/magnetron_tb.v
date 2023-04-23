@@ -4,9 +4,9 @@
 module magnetron_tb();
 
     reg startn_TB, stopn_TB, clearn_TB, door_closed_TB, timer_done_TB;
-    wire Q_TB;
+    wire mag_on_TB;
 
-    magnetron DUT(.startn(startn_TB),.stopn(stopn_TB),.clearn(clearn_TB),.door_closed(door_closed_TB),.timer_done(timer_done_TB), .Q(Q_TB));
+    magnetron DUT(.startn(startn_TB),.stopn(stopn_TB),.clearn(clearn_TB),.door_closed(door_closed_TB),.timer_done(timer_done_TB), .mag_on(mag_on_TB));
 
     initial 
         begin

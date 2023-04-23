@@ -3,13 +3,13 @@
 
 module magnetron(input wire startn, stopn, 
                  clearn, door_closed, timer_done,
-                 output wire Q);
+                 output wire mag_on);
 
     wire set_wire, reset_wire;
 
     comb_logic comb_logic(startn, stopn, clearn, door_closed, timer_done, set_wire, reset_wire);
 
 
-    latch_sr latch_sr(set_wire, reset_wire, Q);
+    latch_sr latch_sr(set_wire, reset_wire, mag_on);
 
 endmodule
