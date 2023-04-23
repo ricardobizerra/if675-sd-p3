@@ -1,38 +1,46 @@
-module decoder (output wire [6:0] OutMinutos, OutDezenaSeg, OutUnidadeSeg,
-                input wire [3:0] Minutos, DezenaSeg, UnidadeSeg);
+module decoder (output reg [6:0] OutMinutos, OutDezenaSegundos, OutUnidadeSegundos, 
+                input wire [3:0] Minutos, DezenaSegundos, UnidadeSegundos);
 
+        always@(Minutos) 
+                case(Minutos)
+                4'b0000 : OutMinutos = 7'b0000001;
+                4'b0001 : OutMinutos = 7'b1001111;
+                4'b0010 : OutMinutos = 7'b0010010;
+                4'b0011 : OutMinutos = 7'b0000110;
+                4'b0100 : OutMinutos = 7'b1001100;
+                4'b0101 : OutMinutos = 7'b0100100;
+                4'b0110 : OutMinutos = 7'b0100000;
+                4'b0111 : OutMinutos = 7'b0001101;
+                4'b1000 : OutMinutos = 7'b0000000;
+                4'b1001 : OutMinutos = 7'b0000100;
+                endcase
 
-        assign OutMinutos = (Minutos == 4'b0000) ? 7'b111_1110 : 
-                            (Minutos == 4'b0001) ? 7'b011_0000 : 
-                            (Minutos == 4'b0010) ? 7'b110_1101 : 
-                            (Minutos == 4'b0011) ? 7'b111_1001 : 
-                            (Minutos == 4'b0100) ? 7'b011_0011 : 
-                            (Minutos == 4'b0101) ? 7'b101_1011 : 
-                            (Minutos == 4'b0110) ? 7'b101_1111 : 
-                            (Minutos == 4'b0111) ? 7'b111_0000 : 
-                            (Minutos == 4'b1000) ? 7'b111_1111 : 
-                            (Minutos == 4'b1001) ? 7'b111_0011 : 8'bXXXX_XXXX;
+        always@(DezenaSegundos)
+                case(DezenaSegundos)
+                4'b0000 : OutDezenaSegundos = 7'b0000001;
+                4'b0001 : OutDezenaSegundos = 7'b1001111;
+                4'b0010 : OutDezenaSegundos = 7'b0010010;
+                4'b0011 : OutDezenaSegundos = 7'b0000110;
+                4'b0100 : OutDezenaSegundos = 7'b1001100;
+                4'b0101 : OutDezenaSegundos = 7'b0100100;
+                4'b0110 : OutDezenaSegundos = 7'b0100000;
+                4'b0111 : OutDezenaSegundos = 7'b0001101;
+                4'b1000 : OutDezenaSegundos = 7'b0000000;
+                4'b1001 : OutDezenaSegundos = 7'b0000100;
+                endcase
+  
+        always@(UnidadeSegundos)
+                case(UnidadeSegundos)
+                4'b0000 : OutUnidadeSegundos = 7'b0000001;
+                4'b0001 : OutUnidadeSegundos = 7'b1001111;
+                4'b0010 : OutUnidadeSegundos = 7'b0010010;
+                4'b0011 : OutUnidadeSegundos = 7'b0000110;
+                4'b0100 : OutUnidadeSegundos = 7'b1001100;
+                4'b0101 : OutUnidadeSegundos = 7'b0100100;
+                4'b0110 : OutUnidadeSegundos = 7'b0100000;
+                4'b0111 : OutUnidadeSegundos = 7'b0001101;
+                4'b1000 : OutUnidadeSegundos = 7'b0000000;
+                4'b1001 : OutUnidadeSegundos = 7'b0000100;
+                endcase
 
-
-        assign OutDezenaSeg =   (DezenaSeg == 4'b0000) ? 7'b111_1110 : 
-                                (DezenaSeg == 4'b0001) ? 7'b011_0000 : 
-                                (DezenaSeg == 4'b0010) ? 7'b110_1101 : 
-                                (DezenaSeg == 4'b0011) ? 7'b111_1001 : 
-                                (DezenaSeg == 4'b0100) ? 7'b011_0011 : 
-                                (DezenaSeg == 4'b0101) ? 7'b101_1011 : 
-                                (DezenaSeg == 4'b0110) ? 7'b101_1111 : 
-                                (DezenaSeg == 4'b0111) ? 7'b111_0000 : 
-                                (DezenaSeg == 4'b1000) ? 7'b111_1111 : 
-                                (DezenaSeg == 4'b1001) ? 7'b111_0011 : 8'bXXXX_XXXX;
-
-        assign OutUnidadeSeg =  (UnidadeSeg == 4'b0000) ? 7'b111_1110 : 
-                                (UnidadeSeg == 4'b0001) ? 7'b011_0000 : 
-                                (UnidadeSeg == 4'b0010) ? 7'b110_1101 : 
-                                (UnidadeSeg == 4'b0011) ? 7'b111_1001 : 
-                                (UnidadeSeg == 4'b0100) ? 7'b011_0011 : 
-                                (UnidadeSeg == 4'b0101) ? 7'b101_1011 : 
-                                (UnidadeSeg == 4'b0110) ? 7'b101_1111 : 
-                                (UnidadeSeg == 4'b0111) ? 7'b111_0000 : 
-                                (UnidadeSeg == 4'b1000) ? 7'b111_1111 : 
-                                (UnidadeSeg == 4'b1001) ? 7'b111_0011 : 8'bXXXX_XXXX;
 endmodule

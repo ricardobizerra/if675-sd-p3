@@ -1,5 +1,5 @@
 $date
-	Sat Apr 22 12:09:13 2023
+	Sat Apr 22 23:16:20 2023
 $end
 $version
 	Icarus Verilog
@@ -8,19 +8,19 @@ $timescale
 	1ns
 $end
 $scope module decoder_tb $end
-$var wire 7 ! OutUnidadeSeg [6:0] $end
-$var wire 7 " OutMinutos [6:0] $end
-$var wire 7 # OutDezenaSeg [6:0] $end
-$var reg 4 $ DezenaSeg [3:0] $end
-$var reg 4 % Minutos [3:0] $end
-$var reg 4 & UnidadeSeg [3:0] $end
-$scope module dut $end
-$var wire 4 ' DezenaSeg [3:0] $end
+$var wire 7 ! OutUnidadeSegundos_TB [6:0] $end
+$var wire 7 " OutMinutos_TB [6:0] $end
+$var wire 7 # OutDezenaSegundos_TB [6:0] $end
+$var reg 4 $ DezenaSegundos_TB [3:0] $end
+$var reg 4 % Minutos_TB [3:0] $end
+$var reg 4 & UnidadeSegundos_TB [3:0] $end
+$scope module DUT $end
+$var wire 4 ' DezenaSegundos [3:0] $end
 $var wire 4 ( Minutos [3:0] $end
-$var wire 4 ) UnidadeSeg [3:0] $end
-$var wire 7 * OutUnidadeSeg [6:0] $end
-$var wire 7 + OutMinutos [6:0] $end
-$var wire 7 , OutDezenaSeg [6:0] $end
+$var wire 4 ) UnidadeSegundos [3:0] $end
+$var reg 7 * OutDezenaSegundos [6:0] $end
+$var reg 7 + OutMinutos [6:0] $end
+$var reg 7 , OutUnidadeSegundos [6:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -29,26 +29,26 @@ $dumpall
 $end
 #0
 $dumpvars
-b1111110 ,
-b1111110 +
-b1111110 *
+b1 ,
+b1 +
+b1 *
 b0 )
 b0 (
 b0 '
 b0 &
 b0 %
 b0 $
-b1111110 #
-b1111110 "
-b1111110 !
+b1 #
+b1 "
+b1 !
 $end
 #5
-b110000 !
-b110000 *
-b110000 #
-b110000 ,
-b110000 "
-b110000 +
+b1001111 !
+b1001111 ,
+b1001111 #
+b1001111 *
+b1001111 "
+b1001111 +
 b1 &
 b1 )
 b1 $
@@ -56,12 +56,12 @@ b1 '
 b1 %
 b1 (
 #10
-b1101101 !
-b1101101 *
-b1101101 #
-b1101101 ,
-b1101101 "
-b1101101 +
+b10010 !
+b10010 ,
+b10010 #
+b10010 *
+b10010 "
+b10010 +
 b10 &
 b10 )
 b10 $
@@ -69,12 +69,12 @@ b10 '
 b10 %
 b10 (
 #15
-b1111001 !
-b1111001 *
-b1111001 #
-b1111001 ,
-b1111001 "
-b1111001 +
+b110 !
+b110 ,
+b110 #
+b110 *
+b110 "
+b110 +
 b11 &
 b11 )
 b11 $
@@ -82,12 +82,12 @@ b11 '
 b11 %
 b11 (
 #20
-b110011 !
-b110011 *
-b110011 #
-b110011 ,
-b110011 "
-b110011 +
+b1001100 !
+b1001100 ,
+b1001100 #
+b1001100 *
+b1001100 "
+b1001100 +
 b100 &
 b100 )
 b100 $
@@ -95,12 +95,12 @@ b100 '
 b100 %
 b100 (
 #25
-b1011011 !
-b1011011 *
-b1011011 #
-b1011011 ,
-b1011011 "
-b1011011 +
+b100100 !
+b100100 ,
+b100100 #
+b100100 *
+b100100 "
+b100100 +
 b101 &
 b101 )
 b101 $
@@ -108,12 +108,12 @@ b101 '
 b101 %
 b101 (
 #30
-b1011111 !
-b1011111 *
-b1011111 #
-b1011111 ,
-b1011111 "
-b1011111 +
+b100000 !
+b100000 ,
+b100000 #
+b100000 *
+b100000 "
+b100000 +
 b110 &
 b110 )
 b110 $
@@ -121,12 +121,12 @@ b110 '
 b110 %
 b110 (
 #35
-b1110000 !
-b1110000 *
-b1110000 #
-b1110000 ,
-b1110000 "
-b1110000 +
+b1101 !
+b1101 ,
+b1101 #
+b1101 *
+b1101 "
+b1101 +
 b111 &
 b111 )
 b111 $
@@ -134,12 +134,12 @@ b111 '
 b111 %
 b111 (
 #40
-b1111111 !
-b1111111 *
-b1111111 #
-b1111111 ,
-b1111111 "
-b1111111 +
+b0 !
+b0 ,
+b0 #
+b0 *
+b0 "
+b0 +
 b1000 &
 b1000 )
 b1000 $
@@ -147,12 +147,12 @@ b1000 '
 b1000 %
 b1000 (
 #45
-b1110011 !
-b1110011 *
-b1110011 #
-b1110011 ,
-b1110011 "
-b1110011 +
+b100 !
+b100 ,
+b100 #
+b100 *
+b100 "
+b100 +
 b1001 &
 b1001 )
 b1001 $
