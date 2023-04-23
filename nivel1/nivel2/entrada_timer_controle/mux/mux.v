@@ -10,9 +10,8 @@ module mux(
             pgt_1Hz = signal;
         end
 
-        else begin
+        else
             pgt_1Hz = clk;
-        end
     end
     
 endmodule
