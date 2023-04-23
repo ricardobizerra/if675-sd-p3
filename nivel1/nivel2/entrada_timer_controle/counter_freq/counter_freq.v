@@ -4,7 +4,7 @@ module counter_freq(
 );
 
     reg [5:0] count = 6'b000000;
-    assign clk_out = 1'b0;
+    initial clk_out = 1'b0;
 
     always @(posedge clk) begin
         count = count + 1'b1;
