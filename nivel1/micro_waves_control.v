@@ -3,8 +3,8 @@
 `include "nivel2/timer_min_sec/timer_nivel2.v"
 `include "nivel2/magnetron/magnetron.v"
 
-module micro_waves_control(input wire startn, stopn, clearn, 
-                           door_closed, [9:0] keyboard, 
+module micro_waves_control(input wire startn, stopn, clearn, door_closed, 
+                           input wire [9:0] keyboard, 
                            input clk, 
                            output wire [6:0] sec_ones_segs, 
                            sec_tens_segs, min_segs,
@@ -13,7 +13,7 @@ module micro_waves_control(input wire startn, stopn, clearn,
     wire [3:0] unidades, dezenas, minutos;
     wire zero;
     wire saida_controle;
-    wire D[3:0];
+    wire [3:0] D;
     wire loadn;
     wire pgt_1Hz;
 
