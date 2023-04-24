@@ -1,17 +1,16 @@
 module mux(
     input wire enablen,
-    input wire signal,
+    input signal,
     input clk,
     output reg pgt_1Hz
 );
 
-    always @(*) begin
+    always @*
         if (enablen == 1'b0) begin
             pgt_1Hz = signal;
         end
 
         else
-            pgt_1Hz = clk;
-    end
+            pgt_1Hz = clk; 
     
 endmodule

@@ -34,7 +34,7 @@ module timer_nivel2(data, clk, enable, load, clear, unidades, dezenas, minutos, 
   contador_mod6 dezena(clk, load, unidades, clear, tc1, tc2, zero2, dezenas);
   
   // Instanciando o contador_mod10 para os minutos
-  contador_mod10_2 minuto(clk, load, dezenas, clear, tc2, tc3, zero3, minutos);
+  contador_mod10 minuto(clk, load, dezenas, clear, tc2, tc3, zero3, minutos);
 
   // Definindo o sinal zero como o AND das saídas zero dos contadores
   assign zero = zero1 & zero2 & zero3;

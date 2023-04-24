@@ -1,6 +1,6 @@
 module counter_non_recycling(
-    input wire clk,
-    input wire clear,
+    input clk,
+    input clear,
     output reg signal
 );
 
@@ -9,9 +9,10 @@ module counter_non_recycling(
     always @(posedge clk or posedge clear) begin
         if (clear) begin
             counter = 3'b000;
+            signal = 1'b0;
         end
 
-        else begin
+        else
             if (counter == 3'b011) begin
                 signal = 1'b1;
                 counter = counter + 1'b1;
@@ -20,7 +21,7 @@ module counter_non_recycling(
             else if (counter < 3'b111) begin
                 counter = counter + 1'b1;
             end
-        end
+        
     end
     
 endmodule

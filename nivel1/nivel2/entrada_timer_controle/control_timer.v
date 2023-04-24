@@ -4,17 +4,34 @@
 `include "nivel2/entrada_timer_controle/mux/mux.v"
 
 module control_timer(
-    input wire [9:0] keyboard,
-    input wire enablen,
+    input [9:0] keyboard,
+    input enablen,
     input clk,
-    output wire [3:0] d,
-    output reg loadn,
-    output reg pgt_1Hz
+    output [3:0] d,
+    output loadn,
+    output pgt_1Hz
 );
+    wire clk_1Hz;
+    wire signal;
+    
+    reg keypad_pressed;
+    
+    initial keypad_pressed = 0;
 
-    reg clk_1Hz;
-    reg signal;
+    always @(keyboard) begin
+    if(keyboard == 10'b00000_00000)
+            keypad_pressed <= 0;
+        else
+            keypad_pressed <= 1;
+    end
 
+    assign loadn = ~keypad_pressed;
+
+    encoder encoder(
+        .keyboard(keyboard), .enablen(enablen),
+        .bcd(d)
+    );
+  
     counter_freq counter_freq(
         .clk(clk),
         .clk_out(clk_1Hz)
@@ -23,11 +40,6 @@ module control_timer(
     counter_non_recycling counter_non_recycling(
         .clk(clk), .clear(loadn),
         .signal(signal)
-    );
-
-    encoder encoder(
-        .keyboard(keyboard), .enablen(enablen),
-        .bcd(d), .valid_data(loadn)
     );
 
     mux mux(

@@ -10,15 +10,15 @@ module micro_waves_control_tb;
 
     micro_waves_control DUT (.startn(startn_TB),.stopn(stopn_TB),.clearn(clearn_TB),.door_closed(door_closed_TB),.clk(clk_TB),.keyboard(keypad_TB),.sec_ones_segs(sec_ones_segs_TB),.sec_tens_segs(sec_tens_segs_TB),.min_segs(min_segs_TB),.mag_on(mag_on_TB));
 
+    initial clk_TB = 0;
+    always #5 clk_TB = ~clk_TB;
+
     initial 
         begin
 
             $dumpfile("micro_waves_control_tb.vcd");
             $dumpvars(0, micro_waves_control_tb);
 
-        end
-    
-    initial begin
         keypad_TB = 10'b0000000000;
         door_closed_TB = 0;
         stopn_TB = 1;
@@ -85,7 +85,7 @@ module micro_waves_control_tb;
         door_closed_TB = 0;
         #1000;
         door_closed_TB = 1;
-        #3000000;
+        #2000;
         $finish();
     end
 

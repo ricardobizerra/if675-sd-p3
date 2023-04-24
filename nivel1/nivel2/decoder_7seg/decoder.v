@@ -11,7 +11,7 @@ module decoder (output wire [6:0] OutMinutos, OutDezenaSeg, OutUnidadeSeg,
                             (Minutos == 4'b0110) ? 7'b101_1111 : 
                             (Minutos == 4'b0111) ? 7'b111_0000 : 
                             (Minutos == 4'b1000) ? 7'b111_1111 : 
-                            (Minutos == 4'b1001) ? 7'b111_0011 : 8'bXXXX_XXXX;
+                            (Minutos == 4'b1001) ? 7'b111_0011 : 7'bXXX_XXXX;
 
 
         assign OutDezenaSeg =   (DezenaSeg == 4'b0000) ? 7'b111_1110 : 
@@ -23,7 +23,7 @@ module decoder (output wire [6:0] OutMinutos, OutDezenaSeg, OutUnidadeSeg,
                                 (DezenaSeg == 4'b0110) ? 7'b101_1111 : 
                                 (DezenaSeg == 4'b0111) ? 7'b111_0000 : 
                                 (DezenaSeg == 4'b1000) ? 7'b111_1111 : 
-                                (DezenaSeg == 4'b1001) ? 7'b111_0011 : 8'bXXXX_XXXX;
+                                (DezenaSeg == 4'b1001) ? 7'b111_0011 : 7'bXXX_XXXX;
 
         assign OutUnidadeSeg =  (UnidadeSeg == 4'b0000) ? 7'b111_1110 : 
                                 (UnidadeSeg == 4'b0001) ? 7'b011_0000 : 
@@ -34,5 +34,5 @@ module decoder (output wire [6:0] OutMinutos, OutDezenaSeg, OutUnidadeSeg,
                                 (UnidadeSeg == 4'b0110) ? 7'b101_1111 : 
                                 (UnidadeSeg == 4'b0111) ? 7'b111_0000 : 
                                 (UnidadeSeg == 4'b1000) ? 7'b111_1111 : 
-                                (UnidadeSeg == 4'b1001) ? 7'b111_0011 : 8'bXXXX_XXXX;
+                                (UnidadeSeg == 4'b1001) ? 7'b111_0011 : 7'bXXX_XXXX;
 endmodule
