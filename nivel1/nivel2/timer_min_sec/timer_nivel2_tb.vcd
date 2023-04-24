@@ -1,5 +1,5 @@
 $date
-	Sat Apr 22 21:21:01 2023
+	Mon Apr 24 19:07:11 2023
 $end
 $version
 	Icarus Verilog
@@ -51,7 +51,7 @@ $var wire 1 0 en $end
 $var wire 1 ) loadn $end
 $var wire 1 / tc $end
 $var wire 1 + zero $end
-$var reg 4 7 mins [3:0] $end
+$var reg 4 7 ones [3:0] $end
 $upscope $end
 $scope module unidade $end
 $var wire 1 % clearn $end
@@ -98,6 +98,21 @@ bx "
 bx !
 $end
 #500
+1$
+1-
+1,
+1+
+b0 !
+b0 .
+b0 4
+b0 9
+b0 #
+b0 3
+b0 5
+b0 6
+b0 "
+b0 2
+b0 7
 0%
 #1000
 1%
