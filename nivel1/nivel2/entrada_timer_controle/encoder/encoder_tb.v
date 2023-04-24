@@ -5,12 +5,11 @@ module encoder_tb;
 
     reg [9:0]keyboard_tb;
     reg enablen_tb;
-  	wire valid_data_tb;
     wire [3:0]bcd_tb;
 
   	encoder dut(
         .keyboard(keyboard_tb), .enablen(enablen_tb), 
-        .bcd(bcd_tb), .valid_data(valid_data_tb)
+        .bcd(bcd_tb)
     );
 
     initial begin
