@@ -13,22 +13,8 @@ Para compilar o projeto no nível 1, basta inserir essa sequência de comandos n
 
 ## Níveis 2 e 3
 
-1. `cd nivel2`
+1. Já estando no nível 1: `cd nivel2`
 
 2. Navegue pelos diretórios e acesse aquele que você quer analisar
 
-3. Insira o mesmo comando de compilação acima: `iverilog -o <arquivo.vvp> <arquivo_tb.v> -g2005-sv`
-
-4. Faça as formas de onda com: `vvp <arquivo.vvp>`
-
-5. Veja as formas de onda com: `gtkwave <arquivo.vcd>`
-
-6. Observações:
-
-    i. "<arquivo.vvp>" é o arquivo que possui extensão .vvp
-
-    ii. "<arquivo.vcd>" é o arquivo que possui extensão .vcd
-
-    iii. "<arquivo_tb.v> é a testbench. Possui, ao final do arquivo, "tb.v"
-
-    iv. Todos esses arquivos já existem. Basta copiar o nome daquele que você deseja analisar e colar no comando adequado.
+3. Procure o arquivo com extensão `.vcd` e veja as formas de onda com o comando: `gtkwave <nome_arquivo.vcd>`
