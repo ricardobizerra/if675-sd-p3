@@ -1,5 +1,5 @@
-`include "comb_logic/comb_logic.v"
-`include "latch_sr/latch_sr.v"
+`include "nivel2/magnetron/comb_logic/comb_logic.v"
+`include "nivel2/magnetron/latch_sr/latch_sr.v"
 
 module magnetron(input wire startn, stopn, 
                  clearn, door_closed, timer_done,

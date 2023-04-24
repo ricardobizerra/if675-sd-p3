@@ -1,7 +1,7 @@
-`include "counter_freq/counter_freq.v"
-`include "counter_non_recycling/counter_non_recycling.v"
-`include "encoder/encoder.v"
-`include "mux/mux.v"
+`include "nivel2/entrada_timer_controle/counter_freq/counter_freq.v"
+`include "nivel2/entrada_timer_controle/counter_non_recycling/counter_non_recycling.v"
+`include "nivel2/entrada_timer_controle/encoder/encoder.v"
+`include "nivel2/entrada_timer_controle/mux/mux.v"
 
 module control_timer(
     input wire [9:0] keyboard,

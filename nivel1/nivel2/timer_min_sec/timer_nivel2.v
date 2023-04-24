@@ -1,7 +1,7 @@
 // Importando os módulos dos contadores
-`include "nivel3_timer/contador_mod10.v"
-`include "nivel3_timer/contador_mod6.v"
-`include "nivel3_timer/contador_mod10_2.v"
+`include "nivel2/timer_min_sec/nivel3_timer/contador_mod10.v"
+`include "nivel2/timer_min_sec/nivel3_timer/contador_mod6.v"
+`include "nivel2/timer_min_sec/nivel3_timer/contador_mod10_2.v"
 
 // Definindo a escala de tempo do módulo
 `timescale 1ns/1ps

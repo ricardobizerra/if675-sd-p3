@@ -1,7 +1,7 @@
+`include "nivel2/magnetron/magnetron.v"
 `include "nivel2/decoder_7seg/decoder.v"
 `include "nivel2/entrada_timer_controle/control_timer.v"
 `include "nivel2/timer_min_sec/timer_nivel2.v"
-`include "nivel2/magnetron/magnetron.v"
 
 module micro_waves_control(input wire startn, stopn, clearn, door_closed, 
                            input wire [9:0] keyboard, 
