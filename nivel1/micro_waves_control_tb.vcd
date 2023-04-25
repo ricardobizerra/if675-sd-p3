@@ -1,5 +1,5 @@
 $date
-	Sun Apr 23 23:43:01 2023
+	Mon Apr 24 19:20:02 2023
 $end
 $version
 	Icarus Verilog
@@ -152,6 +152,9 @@ $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
 #0
 $dumpvars
 bx W
