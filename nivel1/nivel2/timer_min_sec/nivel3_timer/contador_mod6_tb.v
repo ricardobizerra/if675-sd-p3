@@ -3,13 +3,13 @@
 
 module contador_mod6_tb ();
     reg clk, loadn,clearn,en;
-  	reg [2:0] data;
-  	wire [2:0] tens;
+  	reg [3:0] data;
+  	wire [3:0] tens;
     wire zero, tc;
     integer i;
 
 
-  contador_mod6 dut(data, clk, loadn, en, clearn, tens, tc, zero);
+  contador_mod6 dut(clk, loadn, data, en, clearn, tc, zero, tens);
   initial
     begin
       $dumpfile("contador_mod6_teste.vcd");
